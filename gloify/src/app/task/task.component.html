@@ -1,0 +1,13 @@
+<div *ngIf="taskdata.isVisible" class="listView">
+    <div class="listDetails">
+        <h3>{{taskdata.title}}</h3>
+        <p>{{taskdata.description}}</p>
+    </div>
+    <div class="listRest">
+        <p>{{taskdata.date}}</p>
+        <div class="dflex">
+            <button class="success" (click)="updateTask()" >update</button>
+            <button class="red" (click)="deleteIt()">delete</button>
+        </div>
+    </div>
+</div>

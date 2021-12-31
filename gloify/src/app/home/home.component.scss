@@ -1,0 +1,63 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .modalParent{
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.459);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .modalBody{
+      width: 400px;
+      max-height: 600px;
+      height: auto;
+      border-radius: 8px;
+      background: white;
+      padding: 8px;
+  }
+  .search{
+      width:500px;
+      padding: 10px;
+      border-radius: 10px;
+      height: 10px;
+  }
+  .menu{
+      margin-right: 20px;
+  }
+  .tasknew{
+      padding: 5px;
+      border-radius: 5px;
+      width:100px;
+      margin-top: 10px;
+      margin-left: 5px;
+  }
+
+  .my2{
+      margin-top: 25px;
+      margin-bottom: 6px;
+  }
+
+  .closeBtn{
+      background: rgb(224, 31, 69);
+      color: white;
+      padding: 3px;
+      border-radius: 10px;
+      height:30px;
+      width:80px;
+      border: none;
+      cursor: pointer;
+  }
+
+  .closeContainer{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }

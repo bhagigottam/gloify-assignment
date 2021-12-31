@@ -1,0 +1,48 @@
+<div class="mainedit">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <div>
+          <label>
+            Title:
+            <input class="inputt" formControlName="title" placeholder="enter title">
+          </label>
+        </div>
+        <div>
+          <label>
+            Description:
+            <input class="inputt" formControlName="description" placeholder="enter description">
+          </label>
+        </div>
+        <div class="input3">
+          <label>
+            Date: {{dateVal}}
+            
+            <input class="hideIt" (dateInput)="dateChanged($event)" matInput formControlName="date" [matDatepicker]="dp3" >
+            <mat-datepicker-toggle  matSuffix [for]="dp3"></mat-datepicker-toggle>
+            <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+          </label>
+        </div>
+        <div class="input4">
+            <label>
+                Priority:
+                <select formControlName="priority" >
+                   
+                    <option *ngFor="let pri of priorities" [ngValue]="pri" (change)="changePri($event)">{{pri}}
+                    </option>
+                 </select>
+                
+              </label>
+        </div>
+        <div class="input4">
+            <label>
+                User:
+                <select formControlName="user" >
+                   
+                  <option *ngFor="let user of users" [ngValue]="user" (change)="changePri($event)">{{user}}
+                  </option>
+               </select>
+                
+              </label>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+</div>

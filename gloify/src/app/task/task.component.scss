@@ -1,0 +1,31 @@
+.listView{
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dflex{
+    display: flex;
+    align-items: center;
+}
+
+button{
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+.success{
+    margin-right: 5px;
+    background: rgb(26, 223, 0);
+}
+
+.red{
+    background: rgb(224, 31, 69);
+}
+

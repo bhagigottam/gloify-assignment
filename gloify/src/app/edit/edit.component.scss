@@ -1,0 +1,32 @@
+.hideIt{
+    position: fixed;
+    left: -1000px;
+    top: -1000px;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+.mainedit{
+    padding:25px;
+}
+
+
+.inputt{
+    padding: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    width: 100%;
+    border-radius: 4px;
+}
+.input3{
+    margin-top:5px;
+}
+.input4{
+    margin-bottom: 15px;
+}
+.btn{
+    background: green;
+    width:80px;
+    height:30px;
+    border-radius: 10px;
+    color: white;
+}

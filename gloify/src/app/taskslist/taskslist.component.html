@@ -1,0 +1,22 @@
+<div cdkDropListGroup>
+    <div class="example-container">
+      
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="tasks"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of tasks  | filter:searchtext" cdkDrag>
+            <app-task (changetask)="taskUpdate($event)" [taskdata]="item"></app-task>
+        </div>
+      </div>
+      <p *ngIf="tasks.length==0"><small>You currently do not have any tasks, please create some.</small></p>
+    </div>
+
+<!-- <div style="padding: 8px;">
+
+    <div *ngFor="let task of tasks | filter:searchtext">
+        <app-task (changetask)="taskUpdate($event)" [taskdata]="task"></app-task>
+    </div>
+</div> -->

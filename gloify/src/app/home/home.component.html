@@ -1,0 +1,51 @@
+<div>
+    <mat-toolbar color="primary">
+        
+        <span>My App</span>
+        <span class="example-spacer"></span>
+        <span>selected user profile:{{selectedProfile}}</span>
+      </mat-toolbar>
+</div>
+
+<div>
+    <div class="my2">
+
+        <input class="form-control search"  type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching ">
+        <p><small>Please note that you are searching in tasks for user: <b>{{selectedProfile}}</b> </small></p> 
+    </div>
+
+    <button  class="tasknew" (click)="openNewTask()" >New Task +</button>
+    <div class="my2">
+        <span class="menu">Select user profile:</span>
+        <select name="profile" id="profile" (change)="changedProfile($event)" >
+            <option value="All">All</option>
+            <option *ngFor="let user of users" [ngValue]="user">{{user}}</option>
+            
+        </select>
+    </div>
+    <div>
+        <app-taskslist [searchtext]="searchText" [tasks]="tasksList"></app-taskslist>
+    </div>
+</div>
+
+
+
+<div class="modalParent" *ngIf="showNewModal">
+    <div class="modalBody">
+        <div class="closeContainer">
+            <span></span>
+            <button (click)="showNewModal=false" class="closeBtn" >Close</button>
+        </div>
+        <app-edit [users]="users"></app-edit>
+    </div>
+</div>
+
+<div class="modalParent" *ngIf="editMoidal">
+    <div class="modalBody">
+        <div class="closeContainer">
+            <span></span>
+            <button (click)="editMoidal=false" class="closeBtn" >close</button>
+        </div>
+        <app-edit [users]="users" [updatetask]="taskToEdit" ></app-edit>
+    </div>
+</div>
